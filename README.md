@@ -11,7 +11,6 @@ Running test server with testApp wrapping library component.
 - Run jest tests with watching: `make test-watch`
 
 
-
 ### My step by step build & process for this project:
 
 Add ts-loader version 3.5.0 to Package JSON (putting 1234 at the end makes the version control appear)
