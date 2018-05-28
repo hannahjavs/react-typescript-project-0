@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "enzyme": "^3.3.0",
+    "jest": "^23.0.1",
+    "material-ui": "^1.0.0-beta.47",
+    "ts-loader": "^3.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^2.8.3"
+  }
+}
