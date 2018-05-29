@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-setup",
+  "name": "react-typescript-project-0",
   "version": "1.0.0",
   "main": "server.js",
   "license": "MIT",
@@ -11,10 +11,10 @@
     "mobx": "^4.2.1",
     "mobx-react": "^5.1.2",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "ts-loader": "^3.5.0"
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "ts-loader": "^3.5.0",
     "css-loader": "^0.28.4",
     "enzyme": "^3.3.0",
     "file-loader": "^0.11.2",
