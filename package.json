@@ -1,12 +1,29 @@
 {
+  "name": "react-typescript-project-0",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
   "dependencies": {
-    "enzyme": "^3.3.0",
-    "jest": "^23.0.1",
     "material-ui": "^1.0.0-beta.47",
+    "mobx": "^4.2.1",
     "mobx-react": "^5.1.2",
-    "ts-loader": "^3.5.0"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "typescript": "^2.8.3"
+    "ts-loader": "^3.5.0",
+    "css-loader": "^0.28.4",
+    "enzyme": "^3.3.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.29.0",
+    "jest": "^22.4.3",
+    "style-loader": "^0.18.2",
+    "typescript": "^2.8.3",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }
