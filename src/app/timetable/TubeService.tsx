@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles, Theme, WithStyles } from '@material-ui/core/styles'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import Divider from '@material-ui/core/Divider'
 
-const styles = theme => ({
+const styles = (theme: Theme) => ({
   root: {
     width: '100%',
     maxWidth: '360px',
@@ -14,44 +14,46 @@ const styles = theme => ({
   },
 })
 
-export interface TubeProps {
+export interface TubeProps extends WithStyles<"root"> {
+  tube: {
     // id: "bakerloo",
     id : string,
     // name: "Bakerloo",
-    name : string,
+    name ?: string,
     // modeName: "tube",
-    modeName : string,
+    modeName ?: string,
     // created: "2018-05-30T12:07:19.113Z",
-    created : string,
+    created ?: string,
     // modified: "2018-05-30T12:07:19.113Z",    
-    modified: string,    
+    modified ?: string,    
     // disruptions: [ ],
-    disruptions ?: string, 
+    disruptions ?: any[], 
     // lineStatuses: [ ],
-    lineStatuses ?: string,
+    lineStatuses ?: any[],
+  }
 }
 
 
-class Tube extends React.Component<TubeProps> {
+export class Tube extends React.Component<TubeProps> {
   render() {
-    const { classes } = this.props // ???
+    const { classes, tube } = this.props
 
     return (
       <div className={classes.root}>
         <List component='nav'>
           <ListItem button>
-            <ListItemText primary={this.props.modeName} />
+            <ListItemText primary={tube.modeName} />
           </ListItem>
           <Divider />
           <ListItem button divider>
-            <ListItemText primary={this.props.modeName} />
+            <ListItemText primary={tube.modeName} />
           </ListItem>
           <ListItem button>
-            <ListItemText primary={this.props.modeName} />
+            <ListItemText primary={tube.modeName} />
           </ListItem>
           <Divider light />
           <ListItem button>
-            <ListItemText primary={this.props.modeName} />
+            <ListItemText primary={tube.modeName} />
           </ListItem>
         </List>
       </div>
@@ -59,4 +61,4 @@ class Tube extends React.Component<TubeProps> {
   }
 }
 
-export default Tube withStyles(styles)
+export default withStyles(styles)(Tube)
