@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 
 import { withStyles, Theme, WithStyles } from '@material-ui/core/styles'
 import List from '@material-ui/core/List'
@@ -14,25 +14,17 @@ const styles = (theme: Theme) => ({
   },
 })
 
-export interface TubeProps extends WithStyles<"root"> {
+export interface TubeProps extends WithStyles<'root'> {
   tube: {
-    // id: "bakerloo",
     id : string,
-    // name: "Bakerloo",
     name ?: string,
-    // modeName: "tube",
     modeName ?: string,
-    // created: "2018-05-30T12:07:19.113Z",
     created ?: string,
-    // modified: "2018-05-30T12:07:19.113Z",    
     modified ?: string,    
-    // disruptions: [ ],
     disruptions ?: any[], 
-    // lineStatuses: [ ],
     lineStatuses ?: any[],
   }
 }
-
 
 export class Tube extends React.Component<TubeProps> {
   render() {
@@ -41,19 +33,26 @@ export class Tube extends React.Component<TubeProps> {
     return (
       <div className={classes.root}>
         <List component='nav'>
-          <ListItem button>
-            <ListItemText primary={tube.modeName} />
+          <ListItem divider>
+            <ListItemText primary={tube.id} />
           </ListItem>
+            <ListItemText primary={tube.name} />
           <Divider />
+          <ListItem>
+            <ListItemText primary={tube.created} />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary={tube.modified} />
+          </ListItem>
+          <Divider light />
           <ListItem button divider>
             <ListItemText primary={tube.modeName} />
           </ListItem>
-          <ListItem button>
-            <ListItemText primary={tube.modeName} />
+          <ListItem divider>
+            <ListItemText primary={tube.disruptions} />
           </ListItem>
-          <Divider light />
-          <ListItem button>
-            <ListItemText primary={tube.modeName} />
+          <ListItem divider>
+            <ListItemText primary={tube.lineStatuses} />
           </ListItem>
         </List>
       </div>

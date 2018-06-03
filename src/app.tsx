@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
 
 import TubeService from './app/timetable/TubeService'
 
@@ -9,13 +9,13 @@ class App extends React.Component {
             <div className='app'>
                 <TubeService tube={{
                     id: 'bakerloo',
-                    name: "Bakerloo",
-                    modeName: "tube",
-                    created: "2018-05-30T12:07:19.113Z",
-                    modified: "2018-05-30T12:07:19.113Z",
-                    disruptions: [],
-                    lineStatuses: [],    
-                    }} />
+                    name: 'Bakerloo',
+                    modeName: 'tube',
+                    created: '2018-05-30T12:07:19.113Z',
+                    modified: '2018-05-30T12:07:19.113Z',
+                    disruptions: ['broke door', 'smashed window'],
+                    lineStatuses: ['bad', 'busy'],    
+                }} />
             </div>
         )
     }
