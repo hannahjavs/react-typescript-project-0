@@ -14,7 +14,7 @@ const styles = theme => ({
   },
 })
 
-export interface Props {
+export interface TubeProps {
     // id: "bakerloo",
     id : string,
     // name: "Bakerloo",
@@ -25,31 +25,38 @@ export interface Props {
     created : string,
     // modified: "2018-05-30T12:07:19.113Z",    
     modified: string,    
+    // disruptions: [ ],
+    disruptions ?: string, 
+    // lineStatuses: [ ],
+    lineStatuses ?: string,
 }
 
-export function ListDividers(props : Props) {
-  const { classes } = this.props
 
-  return (
-    <div className={classes.root}>
-      <List component='nav'>
-        <ListItem button>
-          <ListItemText primary='Central Line' />
-        </ListItem>
-        <Divider />
-        <ListItem button divider>
-          <ListItemText primary='Northern Line' />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary='Piccadily Line' />
-        </ListItem>
-        <Divider light />
-        <ListItem button>
-          <ListItemText primary='Victoria Line' />
-        </ListItem>
-      </List>
-    </div>
-  )
+class Tube extends React.Component<TubeProps> {
+  render() {
+    const { classes } = this.props // ???
+
+    return (
+      <div className={classes.root}>
+        <List component='nav'>
+          <ListItem button>
+            <ListItemText primary={this.props.modeName} />
+          </ListItem>
+          <Divider />
+          <ListItem button divider>
+            <ListItemText primary={this.props.modeName} />
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary={this.props.modeName} />
+          </ListItem>
+          <Divider light />
+          <ListItem button>
+            <ListItemText primary={this.props.modeName} />
+          </ListItem>
+        </List>
+      </div>
+    )
+  }
 }
 
-export default withStyles(styles)(ListDividers)
+export default Tube withStyles(styles)
