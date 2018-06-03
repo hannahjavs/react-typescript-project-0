@@ -1,7 +1,6 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "allowSyntheticDefaultImports": true,
         "lib": [
             "dom",
             "es2015",
@@ -13,18 +12,18 @@
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
+        "strictNullChecks": true,
         "removeComments": false,
         "sourceMap": true,
         "skipLibCheck": true,
-        "strictNullChecks": true,
         "strictPropertyInitialization": true,
-        "baseUrl": "./src"
+        "baseUrl": "./src",
     },
     "include": [
         "src/**/*"
     ]
 }
-
-
