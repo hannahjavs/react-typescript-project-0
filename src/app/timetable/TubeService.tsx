@@ -5,6 +5,8 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import Divider from '@material-ui/core/Divider'
+import getTubeLines from '../../actions/getTubeLines'
+// import getTubeLines from 'actions/getTubeLines'
 
 const styles = (theme: Theme) => ({
   root: {
@@ -32,9 +34,11 @@ export class Tube extends React.Component<TubeProps> {
 
     return (
       <div className={classes.root}>
+      {/* {action=getTubeLines} */}
+      {/* I DONT KNOW WHAT IM DOING........... */}
         <List component='nav'>
           <ListItem divider>
-            <ListItemText primary={tube.id} />
+            <ListItemText primary={getTubeLines} />
           </ListItem>
             <ListItemText primary={tube.name} />
           <Divider />

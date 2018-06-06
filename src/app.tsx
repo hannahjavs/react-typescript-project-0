@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
 import TubeService from './app/timetable/TubeService'
+import getTubeLines from 'actions/getTubeLines'
 
 class App extends React.Component {
     render() {
@@ -13,8 +14,8 @@ class App extends React.Component {
                     modeName: 'tube',
                     created: '2018-05-30T12:07:19.113Z',
                     modified: '2018-05-30T12:07:19.113Z',
-                    disruptions: ['broke door', 'smashed window'],
-                    lineStatuses: ['bad', 'busy'],    
+                    disruptions: ['smashed window'],
+                    lineStatuses: ['busy'],    
                 }} />
             </div>
         )
