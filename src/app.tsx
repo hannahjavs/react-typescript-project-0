@@ -2,7 +2,6 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
 import TubeService from './app/timetable/TubeService'
-import getTubeLines from 'actions/getTubeLines'
 
 class App extends React.Component {
     render() {
@@ -23,3 +22,8 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('react-app'))
+
+// here component is rending one tube
+// make the component render a list of tubes
+// create a store and put dummy data into the store
+// make components read data out of the store
