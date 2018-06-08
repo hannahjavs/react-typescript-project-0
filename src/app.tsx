@@ -44,12 +44,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('react-app'))
-
-// here component is rending one tube
-// make the component render a list of tubes
-// create a store and put dummy data into the store
-// make components read data out of the store
-
-// App - for now just a test component which passes dummy data
-//     TubeList - takes an array of tube data via props and renders...
-//         Tube - takes a single tube via props and renders...
