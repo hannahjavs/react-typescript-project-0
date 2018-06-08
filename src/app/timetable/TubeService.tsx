@@ -14,7 +14,7 @@ const styles = (theme: Theme) => ({
   },
 })
 
-export interface TubeProps extends WithStyles<'root'> {
+export interface Props extends WithStyles<'root'> {
   tube: {
     id : string,
     name ?: string,
@@ -26,10 +26,10 @@ export interface TubeProps extends WithStyles<'root'> {
   }
 }
 
-export class Tube extends React.Component<TubeProps> {
-  render() {
+export class TubeService extends React.Component<Props> {
+  public render() {
     const { classes, tube } = this.props
-
+    
     return (
       <div className={classes.root}>
         <List component='nav'>
@@ -60,4 +60,4 @@ export class Tube extends React.Component<TubeProps> {
   }
 }
 
-export default withStyles(styles)(Tube)
+export default withStyles(styles)(TubeService)
